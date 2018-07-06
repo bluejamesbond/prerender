@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
 
-var server = prerender();
+var server = prerender({followRedirects: true});
 
 server.use(prerender.sendPrerenderHeader());
 // server.use(prerender.blockResources());
