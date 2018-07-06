@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
 
-var server = prerender({followRedirects: true, chromeLocation: process.env.GOOGLE_CHROME_BIN});
+var server = prerender({followRedirects: true, chromeLocation: '/app/.apt/usr/bin/google-chrome'});
 
 server.use(prerender.sendPrerenderHeader());
 // server.use(prerender.blockResources());
